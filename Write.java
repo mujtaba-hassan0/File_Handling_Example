@@ -38,12 +38,14 @@ public class Write{
             String content = sc.nextLine();
             writer.write(content);
             System.out.println("Content written to file successfully.");
-        } catch (IOException e) {
-            System.out.println("An error occurred while writing to the file: " + e.getMessage());
         }
-        catch(FileNotFoundException e){
+          catch(FileNotFoundException e){
             System.out.println("File not found: " + e.getMessage());
         }
+         catch (IOException e) {
+            System.out.println("An error occurred while writing to the file: " + e.getMessage());
+        }
+       
     }
 
         
@@ -61,13 +63,13 @@ public class Write{
                 writer.write(addContent + System.lineSeparator());
                 System.out.println("Content appended to file successfully.");
             }
-        catch (IOException e) {
-            System.out.println("An error occurred while appending to the file: " + e.getMessage()); 
-        }
-        
-        catch(FileNotFoundException e){
-            System.out.println("File not found: " + e.getMessage());
-        }
+            
+            catch(FileNotFoundException e){
+                System.out.println("File not found: " + e.getMessage());
+            }
+            catch (IOException e) {
+                System.out.println("An error occurred while appending to the file: " + e.getMessage()); 
+            }
         }
     
 
@@ -87,12 +89,12 @@ public class Write{
             System.out.println("File overwritten successfully.");
         }   
 
-        catch (IOException e) {
-            System.out.println("An error occurred while writing to the file: " + e.getMessage());
-        }
         
         catch(FileNotFoundException e){
             System.out.println("File not found: " + e.getMessage());
+        }
+        catch (IOException e) {
+            System.out.println("An error occurred while writing to the file: " + e.getMessage());
         }
     }
 
